@@ -20,6 +20,4 @@ class Scrabble
 
 end
 
-
-  # word.each_char {|l| score += point_values[l.upcase]}
-    # point_values[word.upcase]
+# point_values[word.upcase]
