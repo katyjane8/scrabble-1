@@ -1,16 +1,23 @@
 class Scrabble
 
   def score(word)
-    point_values.each do |k,v|
-      puts "#{k}, #{v}"
-      if k == word.downcase
-        puts v
-      else
-        k == nil
-        v == nil
-      end
+    score = 0
+      word.chars
     end
+  end
 
+
+    # point_values.each do |k,v|
+    #   puts "#{k}, #{v}"
+    #   if k == word.downcase
+    #     puts v
+    #   else
+    #     k == nil
+    #     v == nil
+    #   end
+    # end
+
+    # point_values[word.upcase]
   end
 
   def point_values
