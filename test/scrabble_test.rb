@@ -31,5 +31,6 @@ class ScrabbleTest < Minitest::Test
 
   def test_score_with_multipliers
     skip
+    game.score_with_multipliers('hello', [1,2,1,1,1])
   end
 end
