@@ -1,9 +1,8 @@
 class Scrabble
 
   def score(word)
-    score = 0
-      word.chars.each { |i| i.upcase }
-      point_values[word]
+    score = word.split('').map { |i| point_values[i.upcase] }
+    score.sum
   end
 
     def point_values
@@ -16,6 +15,10 @@ class Scrabble
         "U"=>1, "V"=>4, "W"=>4, "X"=>8,
         "Y"=>4, "Z"=>10, " "=>0
       }
+    end
+
+    def score_with_multipliers(word, multis)
+      score(word).to_i * multis
     end
 
 end

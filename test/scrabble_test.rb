@@ -22,15 +22,9 @@ class ScrabbleTest < Minitest::Test
     assert_equal 0, game.score(" ")
   end
 
-  def test_score_is_nil_with_nil
-    skip
+  def test_score_with_multipliers
     game = Scrabble.new
 
-    assert_nil game.score
-  end
-
-  def test_score_with_multipliers
-    skip
-    game.score_with_multipliers('hello', [1,2,1,1,1])
+    assert_equal 9, game.score_with_multipliers('hello', [1,2,1,1,1])
   end
 end
